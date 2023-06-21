@@ -25,7 +25,7 @@ const Circle = styled.div`
             width: 450px;
             height: 450px;
             position: absolute;
-            background: ${props => props.result > 90 ? '#F50045' : props.result > 80 ? '#FFD24F' : props.result > 60 ? '#00F58E' : '#F000F5'};
+            background: ${props => props.result >= 20 && props.result < 40 ? '#F50045' : props.result >= 40 && props.result < 80 ? '#FFD24F' : props.result >= 80 && props.result < 120 ? '#00F58E' : '#F000F5'};
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -39,7 +39,7 @@ const Circle = styled.div`
             width: 350px;
             height: 350px;
             position: absolute;
-            background: ${props => props.result > 90 ? '#F50045' : props.result > 80 ? '#FFD24F' : props.result > 60 ? '#00F58E' : '#F000F5'};
+            background: ${props => props.result >= 20 && props.result < 40 ? '#F50045' : props.result >= 40 && props.result < 80 ? '#FFD24F' : props.result >= 80 && props.result < 120 ? '#00F58E' : '#F000F5'};
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -71,7 +71,7 @@ const Circle = styled.div`
             width: 150px;
             height: 150px;
             position: absolute;
-            background: ${props => props.result > 90 ? '#F50045' : props.result > 80 ? '#FFD24F' : props.result > 60 ? '#00F58E' : '#F000F5'};
+            background: ${props => props.result >= 20 && props.result < 40 ? '#F50045' : props.result >= 40 && props.result < 80 ? '#FFD24F' : props.result >= 80 && props.result < 120 ? '#00F58E' : '#F000F5'};
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -85,7 +85,7 @@ const Circle = styled.div`
             width: 250px;
             height: 250px;
             position: absolute;
-            background: ${props => props.result > 90 ? '#F50045' : props.result > 80 ? '#FFD24F' : props.result > 60 ? '#00F58E' : '#F000F5'};
+            background: ${props => props.result >= 20 && props.result < 40 ? '#F50045' : props.result >= 40 && props.result < 80 ? '#FFD24F' : props.result >= 80 && props.result < 120 ? '#00F58E' : '#F000F5'};
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -104,6 +104,7 @@ export default function Scanning() {
     const [currentPulse, setCurrentPulse] = useState(0);
     const [result, setResult] = useState(0);
 
+
     const startPulse = () => {
         setStart(true);
     }
@@ -117,7 +118,7 @@ export default function Scanning() {
         const nextButton = document.querySelector('nav button:last-child');
         if (start) {
             const interval = setInterval(() => {
-                setCurrentPulse(Math.floor(Math.random() * (120 - 60 + 1) + 60));
+                setCurrentPulse(Math.floor(Math.random() * (120 - 20 + 1) + 20));
             }, Math.floor(Math.random() * (1300 - 900 + 1) + 900));
             setTimeout(() => {
                 clearInterval(interval);
@@ -134,9 +135,7 @@ export default function Scanning() {
         }
     }, [start]);
 
-
-
-    localStorage.setItem('result', currentPulse);
+    localStorage.setItem('result', currentPulse)
 
     return (
         <>
