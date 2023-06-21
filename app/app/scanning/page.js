@@ -105,6 +105,7 @@ export default function Scanning() {
     const [result, setResult] = useState(0);
 
 
+
     const startPulse = () => {
         setStart(true);
     }
@@ -135,7 +136,9 @@ export default function Scanning() {
         }
     }, [start]);
 
-    localStorage.setItem('result', currentPulse)
+    if (typeof window !== 'undefined') {
+        localStorage.setItem('result', currentPulse);
+    }
 
     return (
         <>
