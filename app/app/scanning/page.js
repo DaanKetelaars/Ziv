@@ -137,7 +137,7 @@ export default function Scanning() {
     }, [start]);
 
     if (typeof window !== 'undefined') {
-        localStorage.setItem('result', currentPulse);
+        window.localStorage.setItem('result', currentPulse);
     }
 
     return (
