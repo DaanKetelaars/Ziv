@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "sass": "^1.63.4",
+    "styled-components": "^5.3.10"
+  }
+}

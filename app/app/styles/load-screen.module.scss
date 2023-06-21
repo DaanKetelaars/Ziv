@@ -1,0 +1,53 @@
+@import 'colors.scss';
+
+.main {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 0 24px;
+        img {
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            animation: fadeOut 2s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+        h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+            color: $color-accent-10;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            animation-delay: 5s;
+            span {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
