@@ -8,20 +8,48 @@
     width: 100%;
     height: 10svh;
     padding-top: 24px;
+
     img {
         width: 35px;
         height: 35px;
         margin: 0 auto;
     }
 }
+
 .main {
-    height: 80svh;
+    height: 100%;
+
     .container {
-        h1 {
-            text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        width: 100%;
+
+        .content-percentage {
+            h1 {
+                font-size: 2rem;
+                line-height: 2rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .warning {
+                text-align: center;
+                margin-top: -2rem;
+                margin-bottom: 1rem;
+                font-size: 0.8331rem;
+                color: $color-accent-06;
+            }
+        }
+
+        svg {
+            margin-top: -2rem;
         }
     }
 }
+
 .bottom-nav {
     height: 10svh;
     width: 100%;
@@ -33,3 +61,154 @@
     padding: 0 44px 1rem 44px;
 }
 
+.current-period {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 24px;
+    margin: 1rem 0;
+
+    h5 {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $color-primary;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    img:nth-of-type(2) {
+        transform: rotate(180deg);
+    }
+}
+
+.data-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    width: 100%;
+
+    .bluetooth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            background-color: $color-state-05;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 100px;
+            padding: 1rem;
+        }
+
+        p {
+            font-size: 0.8331rem;
+            font-weight: 400;
+            margin-top: .5rem;
+        }
+    }
+
+    .average-hrv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3rem;
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            background-color: $color-state-04;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 100px;
+            padding: 1rem;
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            span:nth-of-type(1) {
+                font-weight: 600;
+                margin-top: .5rem;
+                font-size: 1.3331rem;
+            }
+
+            span:nth-of-type(2) {
+                font-size: 0.8331rem;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+    .current-period-score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3rem;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            span:nth-of-type(1) {
+                font-weight: 600;
+                margin-top: .5rem;
+                font-size: 1.3331rem;
+            }
+
+            span:nth-of-type(2) {
+                font-size: 0.8331rem;
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 1rem 0;
+
+    a {
+        opacity: .25;
+        color: $color-primary;
+        font-size: 0.8331rem;
+        border-bottom: 1px solid $color-primary;
+        padding-bottom: .5rem;
+    }
+
+    .active {
+        opacity: 1;
+    }
+
+
+}

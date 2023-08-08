@@ -1,5 +1,3 @@
-import React from "react";
-
 const cleanPercentage = (percentage) => {
     const tooLow = !Number.isFinite(+percentage) || percentage < 0;
     const tooHigh = percentage > 100;

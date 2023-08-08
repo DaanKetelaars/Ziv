@@ -1,0 +1,282 @@
+@import 'colors.scss';
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10svh;
+    padding-top: 24px;
+
+    img {
+        width: 35px;
+        height: 35px;
+        margin: 0 auto;
+    }
+}
+
+.main {
+    height: 100%;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        width: 100%;
+
+        section {
+            h1 {
+                margin-top: 2rem;
+                font-size: 2rem;
+                line-height: 2rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            p {
+                font-size: 0.8331rem;
+                color: $color-accent-06;
+                margin-top: .5rem;
+                margin-bottom: .5rem;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: row;
+                margin: 2rem 0;
+
+                li {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    p {
+                        font-size: 1.6669rem;
+                        font-weight: 600;
+
+                        &:nth-child(1) {
+                            color: $color-accent-06;
+                        }
+
+                        &:nth-child(2) {
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 100;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 2rem;
+
+        button {
+            background-color: $color-accent-02;
+            border-radius: 3px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin: 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: $color-secondary;
+    width: 300px;
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .stapOne {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            color: $color-primary;
+            font-size: 1.6669rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        a {
+            background: $color-primary;
+            color: $color-secondary;
+            margin-top: 1rem;
+            border: none;
+            font-size: 1rem;
+            line-height: 1.1669rem;
+            border-radius: 100px;
+            padding: .75rem 1.25rem;
+            width: fit-content;
+            text-align: center;
+        }
+
+        button {
+            background: $color-primary;
+            color: $color-secondary;
+            margin-top: 1rem;
+            border: none;
+            font-size: 1rem;
+            line-height: 1.1669rem;
+            border-radius: 100px;
+            padding: .75rem 1.25rem;
+            width: fit-content;
+            text-align: center;
+            cursor: pointer;
+
+            &:nth-child(1) {
+                background: $color-accent-10;
+                color: $color-primary;
+            }
+        }
+
+        p {
+            color: $color-accent-06;
+            font-size: 0.8331rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+
+    .stapTwo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            color: $color-primary;
+            font-size: 1.6669rem;
+        }
+
+        a {
+            background: $color-primary;
+            color: $color-secondary;
+            margin-top: 1rem;
+            border: none;
+            font-size: 1rem;
+            line-height: 1.1669rem;
+            border-radius: 100px;
+            padding: .75rem 1.25rem;
+            width: fit-content;
+            text-align: center;
+        }
+
+        p {
+            color: $color-accent-06;
+            font-size: 0.8331rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+
+    .popup-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            color: $color-primary;
+            font-size: 1.6669rem;
+        }
+
+        a {
+            background: $color-primary;
+            color: $color-secondary;
+            margin-top: 1rem;
+            border: none;
+            font-size: 1rem;
+            line-height: 1.1669rem;
+            border-radius: 100px;
+            padding: .75rem 1.25rem;
+            width: fit-content;
+            text-align: center;
+        }
+
+        p {
+            color: $color-accent-06;
+            font-size: 0.8331rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 110;
+}
