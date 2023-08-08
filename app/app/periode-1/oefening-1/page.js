@@ -28,9 +28,6 @@ export default function OefeningOne() {
     const [pause, setPause] = useState(false);
     const [stop, setStop] = useState(false);
 
-    const video = document.querySelector('video');
-
-
     useEffect(() => {
         const popup = document.getElementById('popup');
         const popupEndedConfirm = document.querySelector('main #popup div:nth-child(1)');
@@ -76,6 +73,7 @@ export default function OefeningOne() {
 
 
     useEffect(() => {
+        const video = document.querySelector('video');
         const interval = setInterval(() => {
             if (play) {
                 video.play();
