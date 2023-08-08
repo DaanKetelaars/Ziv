@@ -195,7 +195,7 @@ export default function OefeningOne() {
                     </section>
                 </div>
                 <div className={styles.video} id='video'>
-                    <video src="/breathing.mp4" controls={false} loop muted type="video/mp4" />
+                    <video src="/breathing.mp4" controls={false} loop muted playsInline type="video/mp4" />
                     <div className={styles.controls}>
                         <button onClick={handlePlay} id='play'><Image src={PlayIconWhite} alt='Play icon' /></button>
                         <button onClick={handlePause} id='pause'><Image src={PauseIconWhite} alt='Pause icon' /></button>
