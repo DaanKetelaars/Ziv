@@ -19,11 +19,11 @@ export default function Confirmation() {
             <main className={styles.main}>
                 <section>
                     <h1>Join je team!</h1>
-                    <p>Join het team. Vul de unieke team code in van precies 8 karakters en maak daarna je profiel aan.</p>
+                    <p>Je bent succesvol toegevoegd aan je team! Veel succes met je sportieve reis naar een betere focus en zo een minder risico op kruisband blessures!</p>
                 </section>
                 <section>
-                    <h4>AH&BC</h4>
-                    <p>Heren 1</p>
+                    <h4>Naam van team en of club</h4>
+                    <p>Eventueel Dames of Heren</p>
                     <Image src={Crest} alt="Crest" width={80} height={80} />
                 </section>
             </main>

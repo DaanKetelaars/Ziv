@@ -1,5 +1,8 @@
 'use client'
 
+// React
+import { useEffect } from 'react'
+
 // Next
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,8 +20,24 @@ import BottomNav from '../components/BottomNav'
 
 
 export default function PeriodeOne() {
+
+    useEffect(() => {
+        const popup = document.getElementById('popupScan');
+        const btn = document.getElementById('start-oefening');
+        const overlay = document.getElementById('overlay');
+        btn.addEventListener('click', () => {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+
+        })
+    }, [])
+
+
+
+
     return (
         <>
+            <div className={styles.overlay} id='overlay'></div>
             <header className={styles.header}>
                 <Image src={Logo} alt="Ziv" />
             </header>
@@ -51,8 +70,8 @@ export default function PeriodeOne() {
                 <div className={styles.oefeningen}>
                     <article className={styles.oefening}>
                         <div className={styles.container}>
-                            <h2>Oefening 1 - Ademhaling <Image src={CheckmarkComplete} alt='Checkmark icon' /></h2>
-                            <p>Een samenvatting van de eerste oefening in deze week.</p>
+                            <h2 className={styles["oef-header"]}>Oefening 1 - Tomaat snijden <Image src={CheckmarkComplete} alt='Checkmark icon' /></h2>
+                            <p className={styles["oef-desc"]}>Een samenvatting van de eerste oefening in deze week.</p>
                             <ul>
                                 <li>
                                     <h4>72</h4>
@@ -65,13 +84,13 @@ export default function PeriodeOne() {
                             </ul>
                         </div>
                         <div className={styles['bg-oefening']}>
-                            <Link href="/scanning-before">Begin oefening</Link>
+                            <span>Oefening voltooid</span>
                         </div>
                     </article>
                     <article className={styles.oefening}>
                         <div className={styles.container}>
-                            <h2>Oefening 2 - Tomaat snijden <Image src={EmptyCheckMark} alt='Checkmark icon' /></h2>
-                            <p>Een samenvatting van de eerste oefening in deze week.</p>
+                            <h2 className={styles["oef-header"]}>Oefening 2 - Ademhaling <Image src={EmptyCheckMark} alt='Checkmark icon' /></h2>
+                            <p className={styles["oef-desc"]}>Een samenvatting van de eerste oefening in deze week.</p>
                             <ul>
                                 <li>
                                     <h4>72</h4>
@@ -84,13 +103,21 @@ export default function PeriodeOne() {
                             </ul>
                         </div>
                         <div className={styles['bg-oefening']}>
-                            <Link href="/periode-1/oefening-1">Begin oefening</Link>
+                            <button id="start-oefening">Begin oefening</button>
+                            <div className={styles.popup} id='popupScan'>
+                                <div className={styles["popup-content"]}>
+                                    <h2>Voor we beginnen</h2>
+                                    <p>Bij elke oefening doen we een HRV scan van te voren en na de oefening. Zo heb jij altijd de meest up to date data!</p>
+                                    <Link href="/scanning-before">Verder</Link>
+                                </div>
+                            </div>
                         </div>
                     </article>
+
                     <article className={styles.oefening}>
                         <div className={styles.container}>
-                            <h2>Oefening 3 - Visualisatie <Image src={EmptyCheckMark} alt='Checkmark icon' /></h2>
-                            <p>Een samenvatting van de eerste oefening in deze week.</p>
+                            <h2 className={styles["oef-header"]}>Oefening 3 - Visualisatie <Image src={EmptyCheckMark} alt='Checkmark icon' /></h2>
+                            <p className={styles["oef-desc"]}>Een samenvatting van de eerste oefening in deze week.</p>
                             <ul>
                                 <li>
                                     <h4>72</h4>

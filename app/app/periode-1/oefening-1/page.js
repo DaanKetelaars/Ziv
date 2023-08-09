@@ -165,7 +165,7 @@ export default function OefeningOne() {
                     <div className={styles.stapTwo}>
                         <h2>Beëindigd</h2>
                         <p>Helaas heb je de oefening niet voltooid. Hierdoor kunnen wij de score van deze oefening niet meenemen en zal er een score van 0 staan ofwel “Geen resultaat”.</p>
-                        <Link href="/periode-1/oefening-1">Verder</Link>
+                        <Link href="/periode-1/">Verder</Link>
                     </div>
                 </div>
 
@@ -195,7 +195,7 @@ export default function OefeningOne() {
                     </section>
                 </div>
                 <div className={styles.video} id='video'>
-                    <video src="/breathing.mp4" controls={false} loop muted playsInline type="video/mp4" poster='/poster-breathing-video Normaal.jpeg' />
+                    <video src="/breathing.mp4" controls={false} loop muted playsInline type="video/mp4" poster='/poster-breathing.jpeg' />
                     <div className={styles.controls}>
                         <button onClick={handlePlay} id='play'><Image src={PlayIconWhite} alt='Play icon' /></button>
                         <button onClick={handlePause} id='pause'><Image src={PauseIconWhite} alt='Pause icon' /></button>

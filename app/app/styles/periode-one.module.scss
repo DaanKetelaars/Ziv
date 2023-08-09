@@ -138,17 +138,42 @@
         width: 100%;
 
         .oefening {
-            &:nth-child(2) {
-                opacity: .5;
-                pointer-events: none;
+
+            &:nth-of-type(1) {
+                .bg-oefening {
+                    background-image: url('../../public/poster-tomaat-snijden.jpeg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+
+                }
+            }
+
+
+            &:nth-of-type(2) {
+                .bg-oefening {
+                    background-image: url('../../public/poster-breathing.jpeg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+
+                }
             }
 
             &:nth-child(3) {
                 opacity: .5;
                 pointer-events: none;
+
+                .bg-oefening {
+                    background-image: url('../../public/poster-visualisatie.jpeg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+
+                }
             }
 
-            h2 {
+            .oef-header {
                 font-size: 1.3331rem;
                 color: $color-primary;
                 display: flex;
@@ -156,10 +181,10 @@
                 align-items: center;
                 flex-direction: row;
                 width: 100%;
-                margin: 2rem 0;
+                margin: 2rem 0 0 0;
             }
 
-            p {
+            .oef-desc {
                 font-size: 0.8331rem;
                 color: $color-accent-06;
                 margin-top: .5rem;
@@ -174,7 +199,7 @@
                 align-items: center;
                 flex-direction: row;
                 width: 100%;
-                margin-bottom: 1rem;
+                margin: 1rem 0;
 
                 li {
                     list-style: none;
@@ -209,8 +234,22 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                position: relative;
 
-                a {
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background-color: rgba(77, 77, 77, .3);
+                    z-index: 1;
+                }
+
+                a,
+                span,
+                button {
                     background: $color-primary;
                     color: $color-secondary;
                     margin: 1rem 0;
@@ -221,8 +260,82 @@
                     padding: 1rem 1.5rem;
                     width: fit-content;
                     text-align: center;
+                    position: relative;
+                    z-index: 10;
+                }
+
+                span {
+                    background-color: $color-accent-13;
+                    color: $color-accent-05;
                 }
             }
         }
     }
+}
+
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: $color-secondary;
+    width: 300px;
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+
+    .popup-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            color: $color-primary;
+            font-size: 1.6669rem;
+        }
+
+        a {
+            background: $color-primary;
+            color: $color-secondary;
+            margin-top: 1rem;
+            border: none;
+            font-size: 1rem;
+            line-height: 1.1669rem;
+            border-radius: 100px;
+            padding: .75rem 1.25rem;
+            width: fit-content;
+            text-align: center;
+        }
+
+        p {
+            color: $color-accent-06;
+            font-size: 0.8331rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+}
+
+
+.overlay {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 110;
+    display: none;
 }

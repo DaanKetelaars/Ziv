@@ -136,6 +136,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    display: none;
 
     .stapOne {
         width: 100%;
@@ -279,4 +280,5 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 110;
+    display: none;
 }

@@ -8,7 +8,6 @@ export default function BottomNav() {
     useEffect(() => {
         const currentPath = window.location.pathname;
         const links = document.querySelectorAll(`.${styles["bottom-nav"]} ul li a`);
-        console.log(links);
         links.forEach(link => {
             if (link.getAttribute('href') === currentPath) {
                 link.parentElement.classList.add(`${styles.active}`)

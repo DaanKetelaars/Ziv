@@ -45,7 +45,7 @@ export default function Periodes() {
                         <article>
                             <section>
                                 <h4>Periode 1 <Image src={EmptyCheckMark} alt="Lege cirkel icon, als deze periode voltooid is, dan zal hier een checkmark inkomen." /></h4>
-                                <p>Korte uitleg van week 1 en wat hier allemaal gaat gebeuren.</p>
+                                <p>Korte uitleg van deze periode en wat hier allemaal gaat gebeuren.</p>
                                 <ul>
                                     <li>3 Oefeningen</li>
                                     <li>~ 15 min</li>
@@ -59,7 +59,7 @@ export default function Periodes() {
                         <article>
                             <section>
                                 <h4>Periode 2 <Image src={EmptyCheckMark} alt="Lege cirkel icon, als deze periode voltooid is, dan zal hier een checkmark inkomen." /></h4>
-                                <p>Korte uitleg van week 1 en wat hier allemaal gaat gebeuren.</p>
+                                <p>Korte uitleg van deze periode en wat hier allemaal gaat gebeuren.</p>
                                 <ul>
                                     <li>3 Oefeningen</li>
                                     <li>~ 30 min</li>
@@ -73,7 +73,7 @@ export default function Periodes() {
                         <article>
                             <section>
                                 <h4>Periode 3 <Image src={EmptyCheckMark} alt="Lege cirkel icon, als deze periode voltooid is, dan zal hier een checkmark inkomen." /></h4>
-                                <p>Korte uitleg van week 1 en wat hier allemaal gaat gebeuren.</p>
+                                <p>Korte uitleg van deze periode en wat hier allemaal gaat gebeuren.</p>
                                 <ul>
                                     <li>3 Oefeningen</li>
                                     <li>~ 11 min</li>
@@ -87,7 +87,7 @@ export default function Periodes() {
                         <article>
                             <section>
                                 <h4>Periode 4 <Image src={EmptyCheckMark} alt="Lege cirkel icon, als deze periode voltooid is, dan zal hier een checkmark inkomen." /></h4>
-                                <p>Korte uitleg van week 1 en wat hier allemaal gaat gebeuren.</p>
+                                <p>Korte uitleg van deze periode en wat hier allemaal gaat gebeuren.</p>
                                 <ul>
                                     <li>3 Oefeningen</li>
                                     <li>~ 20 min</li>

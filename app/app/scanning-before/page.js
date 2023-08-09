@@ -31,8 +31,10 @@ const Circle = styled.div`
             left: 50%;
             opacity: 0.05;
             transform: translate(-50%, -50%);
+            transform-origin: 0 0;
             z-index: -1;
             transition: all 0.5s ease-in-out;
+            animation: slowBounce 2.5s infinite ease-in-out;
     }
     &::before {
             content: '';
@@ -45,8 +47,10 @@ const Circle = styled.div`
             left: 50%;
             opacity: 0.2;
             transform: translate(-50%, -50%);
+            transform-origin: 0 0;
             z-index: -1;
             transition: all 0.5s ease-in-out;
+            animation: slowBounce 2.5s infinite ease-in-out;
     }
     h1 {
         position: relative;
@@ -76,9 +80,11 @@ const Circle = styled.div`
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            transform-origin: 0 0;
             z-index: 3;
             opacity: 1;
             transition: all 0.5s ease-in-out;
+            animation: slowBounce 2.5s infinite ease-in-out;
     }
     &::before {
             content: '';
@@ -90,9 +96,22 @@ const Circle = styled.div`
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            transform-origin: 0 0;
             z-index: 1;
             opacity: 0.5;
             transition: all 0.5s ease-in-out;
+            animation: slowBounce 2.5s infinite ease-in-out;
+    }
+    @keyframes slowBounce {
+        0% {
+            transform: scale(1) translate(-50%, -50%);
+        }
+        50% {
+            transform: scale(1.05) translate(-50%, -50%);
+        }
+        100% {
+            transform: scale(1) translate(-50%, -50%);
+        }
     }
 }
 `;

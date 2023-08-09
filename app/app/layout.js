@@ -6,9 +6,13 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  // if window width is smaller than 768px, remove the children from the DOM
+
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   )
 }

@@ -27,7 +27,6 @@ export default function CreateAccount() {
 
     useEffect(() => {
         const button = document.querySelector('main > form > button');
-        console.log(button);
         if (value) {
             button.style.pointerEvents = 'auto';
             button.style.background = '#000';
@@ -48,7 +47,6 @@ export default function CreateAccount() {
             <main className={styles.main}>
                 <section>
                     <h1>Join je team!</h1>
-                    <p>Join het team. Vul de unieke team code in van precies 8 karakters en maak daarna je profiel aan.</p>
                 </section>
                 <form onSubmit={handleSubmit}>
                     <div>
