@@ -22,7 +22,7 @@ export default function OefeningOne() {
 
     // create a countdown timer that starts at 5:45 and counts down to 0:00 and then stops, this timer has a pause and play function and a stop function that resets the timer to 5:45 and stops the timer from counting down to 0:00, build this timer using the useEffect hook and useState hook
 
-    const [timer, setTimer] = useState('00:20');
+    const [timer, setTimer] = useState('00:05');
     const [state, setState] = useState('72');
     const [play, setPlay] = useState(false);
     const [pause, setPause] = useState(false);
@@ -110,7 +110,7 @@ export default function OefeningOne() {
                 video.pause();
                 video.currentTime = 0;
                 clearInterval(interval);
-                setTimer('00:20');
+                setTimer('00:05');
             }
         }, 1000);
         return () => clearInterval(interval);
