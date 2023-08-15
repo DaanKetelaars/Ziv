@@ -19,11 +19,10 @@ export default function ScanIntro() {
                 <div className={styles.container}>
                     <section>
                         <h1>Hoe is je focus?</h1>
-                        <p>Voor je kan beginnen met het trainen van je focus, wordt er eerst even een hartritmevariabiliteit scan gedaan. Op basis van die data kunnen wij namelijk een blessuregevoeligheid koppelen aan jouw profiel.</p>
+                        <p>Voor je kan beginnen met het trainen van je focus, wordt er eerst even een hartritmevariabiliteit scan gedaan.</p> <p>Op basis van die data kunnen wij namelijk een blessuregevoeligheid koppelen aan jouw profiel.</p>
                     </section>
                     <div>
                         <Image src={BigHeart} alt="Big Heart" />
-                        <p>Hoe wordt dit gemeten en vastgesteld? check dan deze <span>link</span> voor meer informatie.</p>
                     </div>
                 </div>
             </main>

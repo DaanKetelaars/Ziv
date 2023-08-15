@@ -8,14 +8,17 @@
     width: 100%;
     height: 10svh;
     padding-top: 24px;
+
     img {
         width: 35px;
         height: 35px;
         margin: 0 auto;
     }
 }
+
 .main {
     height: 90svh;
+
     section {
         display: flex;
         flex-direction: column;
@@ -23,19 +26,21 @@
         justify-content: flex-start;
         padding: 2rem 24px 0 24px;
         flex: 0 0 35%;
+
         h1 {
             font-size: 2rem;
             line-height: 2rem;
             text-align: center;
         }
+
         p {
             font-size: 1rem;
-            line-height: 1.1669rem;
             text-align: center;
             margin: 1rem 0 2rem 0;
             color: $color-accent-06;
         }
     }
+
     form {
         display: flex;
         flex-direction: column;
@@ -44,6 +49,7 @@
         width: 100%;
         padding: 0 24px;
         flex: 0 0 65%;
+
         button {
             background: $color-accent-13;
             color: $color-accent-05;
@@ -56,9 +62,11 @@
             width: 100%;
             text-align: center;
         }
+
         div {
             position: relative;
             width: 100%;
+
             input {
                 color: $color-primary;
                 background: $color-secondary;
@@ -66,13 +74,16 @@
                 line-height: 1.1669rem;
                 border-radius: 10px;
                 padding: 1rem 1.5rem;
+                margin: .5rem 0 1rem 0;
                 width: 100%;
                 border: 1px solid $color-accent-13;
                 text-align: left;
+
                 &::placeholder {
                     color: $color-accent-07;
                 }
             }
+
             img {
                 width: 20px;
                 height: 20px;

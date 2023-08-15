@@ -182,6 +182,11 @@
 
 .hrv-graph {
     margin-top: 3rem;
+
+    img {
+        width: 100%;
+        transform: scale(1.2);
+    }
 }
 
 .tabs {

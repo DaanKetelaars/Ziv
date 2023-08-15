@@ -52,25 +52,22 @@ export default function CreateAccount() {
                     <div>
                         <label htmlFor="name">Naam</label>
                         <input type="text" name="name" id="name" placeholder="Vul hier je volledige naam in..." required />
-
                         <label htmlFor="password">Wachtwoord aanmaken</label>
                         <input type="password" name="password" id="password" placeholder="Vul hier je wachtwoord in..." required />
-
-                        <label htmlFor="date">Geboortedatum</label>
-                        <input type="date" name="date" id="date" placeholder="Geboortedatum" required />
-
-                        <label htmlFor="sport">Sport</label>
-                        <select name="sport" id="sport" required defaultValue="default" onChange={e => setValue(e.target.value)}>
-                            <option value="default" disabled hidden>Kies je sport</option>
-                            <option value="voetbal">Voetbal</option>
-                            <option value="basketbal">Basketbal</option>
-                            <option value="tennis">Tennis</option>
-                            <option value="zwemmen">Zwemmen</option>
-                            <option value="atletiek">Atletiek</option>
-                            <option value="gymnastiek">Gymnastiek</option>
-                            <option value="handbal">Handbal</option>
-                            <option value="hockey">Hockey</option>
-                        </select>
+                        <div className={styles.date}>
+                            <div>
+                                <label htmlFor="date">DD</label>
+                                <input type="text" pattern="[0-9]*" maxlength="2" size="2" class="date-field" required />
+                            </div>
+                            <div>
+                                <label>MM</label>
+                                <input type="text" pattern="[0-9]*" maxlength="2" size="2" class="date-field" required />
+                            </div>
+                            <div>
+                                <label>YYYY</label>
+                                <input type="text" pattern="[0-9]*" maxlength="4" size="4" class="date-field date-field--year" required />
+                            </div>
+                        </div>
                     </div>
                     <button type="submit">Account aanmaken</button>
                 </form>

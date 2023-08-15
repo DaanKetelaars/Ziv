@@ -53,7 +53,7 @@ export default function Home() {
                 </div>
                 <div className={styles.tabs}>
                     <Link href="/home" className={styles.active}>Overview</Link>
-                    <Link href="/oefeningen-results">Oefeningen</Link>
+                    <Link href="/oefeningen-results">Resultaten</Link>
                 </div>
                 <div className={styles.container}>
                     <div className={styles["data-icons"]}>

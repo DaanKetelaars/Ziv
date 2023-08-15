@@ -16,7 +16,7 @@ import ArrowForwardBlack from '@/public/arrow-forward-black.svg'
 import ScoreIcon from '@/public/score.svg'
 import BlackHeart from '@/public/black-heart.svg'
 import TimeIcon from '@/public/time.svg'
-import HRVGraph from '@/public/hrv-graph.svg'
+import HRVGraph from '@/public/hrv-data.svg'
 
 
 // Styles
@@ -40,7 +40,7 @@ export default function OefeningenResults() {
                 </div>
                 <div className={styles.tabs}>
                     <Link href="/home">Overview</Link>
-                    <Link href="/oefeningen-results" className={styles.active}>Oefeningen</Link>
+                    <Link href="/oefeningen-results" className={styles.active}>Resultaten</Link>
                 </div>
                 <div className={styles.container}>
                     <Pie percentage={percentage} colour={colour} />
@@ -51,7 +51,6 @@ export default function OefeningenResults() {
                     <div className={styles.resultaten}>
                         <h2>Resultaten</h2>
                         <p>Hieronder zie je jouw resultaten van de huidige periode. De scores zijn gebaseerd op je hartritmevariabiliteit tijdens die specifieke oefening</p>
-                        <Link href="https://onlinelibrary.wiley.com/doi/full/10.1111/anec.12148">Meer over hartritmevariabiliteit <Image src={ArrowForwardBlack} alt="Arrow icon" /> </Link>
 
                         <div className={styles.oefeningen}>
                             <article className={styles.oefening}>
