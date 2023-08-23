@@ -53,7 +53,7 @@ export default function Login() {
                         <label htmlFor="name">Naam</label>
                         <input type="text" name="name" id="name" placeholder="Naam..." required />
 
-                        <label htmlFor="password">Wachtwoord aanmaken</label>
+                        <label htmlFor="password">Wachtwoord</label>
                         <input type="password" name="password" id="password" placeholder="Wachtwoord..." required onChange={e => setValue(e.target.value)} />
                     </div>
                     <button type="submit">Login</button>
