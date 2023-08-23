@@ -51,21 +51,21 @@ export default function CreateAccount() {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="name">Naam</label>
-                        <input type="text" name="name" id="name" placeholder="Vul hier je volledige naam in..." required />
+                        <input type="text" name="name" id="name" placeholder="Vul hier je volledige naam in..." autoComplete='on' required />
                         <label htmlFor="password">Wachtwoord aanmaken</label>
                         <input type="password" name="password" id="password" placeholder="Vul hier je wachtwoord in..." required />
                         <div className={styles.date}>
                             <div>
                                 <label htmlFor="date">DD</label>
-                                <input type="text" pattern="[0-9]*" maxlength="2" size="2" class="date-field" required />
+                                <input type="number" pattern="[0-9]*" maxLength="2" size="2" required />
                             </div>
                             <div>
                                 <label>MM</label>
-                                <input type="text" pattern="[0-9]*" maxlength="2" size="2" class="date-field" required />
+                                <input type="number" pattern="[0-9]*" maxLength="2" size="2" required />
                             </div>
                             <div>
                                 <label>YYYY</label>
-                                <input type="text" pattern="[0-9]*" maxlength="4" size="4" class="date-field date-field--year" required />
+                                <input type="number" pattern="[0-9]*" maxLength="4" size="4" required onChange={e => setValue(e.target.value)} />
                             </div>
                         </div>
                     </div>
