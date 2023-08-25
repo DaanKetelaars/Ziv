@@ -1,7 +1,7 @@
 'use client'
 
 // React
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 // Next
 import Image from 'next/image'
@@ -13,6 +13,7 @@ import Clock from '@/public/clock-icon.svg'
 import Fitness from '@/public/fitness-icon.svg'
 import CheckmarkComplete from '@/public/complete-checkmark.svg'
 import EmptyCheckMark from '@/public/empty-checkmark-dark.svg'
+import Arrow from '@/public/arrow-forward-black.svg'
 
 // Styles
 import styles from '@/app/styles/periode-one.module.scss'
@@ -30,8 +31,19 @@ export default function PeriodeOne() {
             overlay.style.display = 'block';
 
         })
+        overlay.addEventListener('click', () => {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        })
     }, [])
+    const [state, setState] = useState();
 
+    let result;
+
+    useEffect(() => {
+        result = parseInt(localStorage.getItem('result'))
+        setState(result)
+    }, [])
 
 
 
@@ -40,13 +52,17 @@ export default function PeriodeOne() {
             <div className={styles.overlay} id='overlay'></div>
             <header className={styles.header}>
                 <Image src={Logo} alt="Ziv" />
+                <Link href="/periodes">
+                    <Image src={Arrow} alt="Ziv" />
+                    <span>Terug</span>
+                </Link>
             </header>
             <main className={styles.main}>
 
                 <div className={styles.container}>
                     <section>
                         <h1>Periode 1</h1>
-                        <p>Hier een samenvatting van periode 1 en de oefeningen die terug komen in deze week. Ook een uitleg wat je precies kan verwachten als resultaat van het doen van deze oefeningen.</p>
+                        <p>We beginnen de eerste periode met wat basis oefeningen. Dit om je focus en concentratie op de proef te stellen. Hieronder krijg je te zien hoe je scoort per oefening, wat uiteindelijk weer verbonden is aan je blessuregevoeligheid.</p>
                         <ul>
                             <li>
                                 <Image src={Fitness} alt="Dumbell icon" />
@@ -54,7 +70,7 @@ export default function PeriodeOne() {
                             </li>
                             <li>
                                 <Image src={Clock} alt="Clock icon" />
-                                <p>~ 2 hour 30 min</p>
+                                <p>~ 10 min</p>
                             </li>
                         </ul>
                     </section>
@@ -71,7 +87,7 @@ export default function PeriodeOne() {
                     <article className={styles.oefening}>
                         <div className={styles.container}>
                             <h2 className={styles["oef-header"]}>Oefening 1 - Tomaat snijden <Image src={CheckmarkComplete} alt='Checkmark icon' /></h2>
-                            <p className={styles["oef-desc"]}>Een samenvatting van de eerste oefening in deze week.</p>
+                            <p className={styles["oef-desc"]}>Probeer heel precies, in een korte tijd een tomaat te snijden. Een ultieme test voor je focus en concentratie.</p>
                             <ul>
                                 <li>
                                     <h4>72</h4>
@@ -90,10 +106,10 @@ export default function PeriodeOne() {
                     <article className={styles.oefening}>
                         <div className={styles.container}>
                             <h2 className={styles["oef-header"]}>Oefening 2 - Ademhaling <Image src={EmptyCheckMark} alt='Checkmark icon' /></h2>
-                            <p className={styles["oef-desc"]}>Een samenvatting van de eerste oefening in deze week.</p>
+                            <p className={styles["oef-desc"]}>Één van de meest gebruikte oefeningen voor het trainen van je focus. Je ademhaling kun je uiteindelijk ook toepassen tijdens je training en of wedstrijd.</p>
                             <ul>
                                 <li>
-                                    <h4>72</h4>
+                                    <h4>{state}</h4>
                                     <p>Gemiddelde HRV score</p>
                                 </li>
                                 <li>
@@ -117,10 +133,10 @@ export default function PeriodeOne() {
                     <article className={styles.oefening}>
                         <div className={styles.container}>
                             <h2 className={styles["oef-header"]}>Oefening 3 - Visualisatie <Image src={EmptyCheckMark} alt='Checkmark icon' /></h2>
-                            <p className={styles["oef-desc"]}>Een samenvatting van de eerste oefening in deze week.</p>
+                            <p className={styles["oef-desc"]}>Met visualisatie gaan we wat dieper dan de vorige 2 oefeningen. We gebruiken de kracht van verbeelding om onze focus te verbeteren.</p>
                             <ul>
                                 <li>
-                                    <h4>72</h4>
+                                    <h4>N/A</h4>
                                     <p>Gemiddelde HRV score</p>
                                 </li>
                                 <li>

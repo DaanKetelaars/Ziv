@@ -27,7 +27,7 @@ export default function Periodes() {
                 <div className={styles.container}>
                     <section>
                         <h1>Programma</h1>
-                        <p>Hier komt een korte samenvatting van het programma en wat je er allemaal in kan verwachten. Ook komt er een uitleg in wat deze oefeningen nou toevoegen aan je normale trainingsschema.</p>
+                        <p>Tijdens deze 9 periodes ga je aan de slag met het trainen van je focus. Dit doe je via verschillende mindfulness oefeningen. Elke periode is aan elkaar verbonden en per periode zullen de oefeningen ook lastiger worden. Veel succes!</p>
                         <ul>
                             <li>
                                 <Image src={Calendar} alt="Agenda icon" />
@@ -35,7 +35,7 @@ export default function Periodes() {
                             </li>
                             <li>
                                 <Image src={Fitness} alt="Dumbell icon" />
-                                <p>12 oefeningen</p>
+                                <p>27 oefeningen</p>
                             </li>
                         </ul>
                     </section>
@@ -45,10 +45,10 @@ export default function Periodes() {
                         <article>
                             <section>
                                 <h4>Periode 1 <Image src={EmptyCheckMark} alt="Lege cirkel icon, als deze periode voltooid is, dan zal hier een checkmark inkomen." /></h4>
-                                <p>Korte uitleg van deze periode en wat hier allemaal gaat gebeuren.</p>
+                                <p>In deze periode zullen we voornamelijk een start maken met de basis.</p>
                                 <ul>
                                     <li>3 Oefeningen</li>
-                                    <li>~ 15 min</li>
+                                    <li>~ 10 min</li>
                                 </ul>
                             </section>
                         </article>
@@ -59,7 +59,7 @@ export default function Periodes() {
                         <article>
                             <section>
                                 <h4>Periode 2 <Image src={EmptyCheckMark} alt="Lege cirkel icon, als deze periode voltooid is, dan zal hier een checkmark inkomen." /></h4>
-                                <p>Korte uitleg van deze periode en wat hier allemaal gaat gebeuren.</p>
+                                <p>Nu we de basis hebben, kunnen we verder met wat complexere oefeningen.</p>
                                 <ul>
                                     <li>3 Oefeningen</li>
                                     <li>~ 30 min</li>
@@ -73,7 +73,7 @@ export default function Periodes() {
                         <article>
                             <section>
                                 <h4>Periode 3 <Image src={EmptyCheckMark} alt="Lege cirkel icon, als deze periode voltooid is, dan zal hier een checkmark inkomen." /></h4>
-                                <p>Korte uitleg van deze periode en wat hier allemaal gaat gebeuren.</p>
+                                <p>Je focus begint steeds beter te worden, daarom kunnen we nog nog een stap verder nemen in de oefeningen.</p>
                                 <ul>
                                     <li>3 Oefeningen</li>
                                     <li>~ 11 min</li>
@@ -87,7 +87,7 @@ export default function Periodes() {
                         <article>
                             <section>
                                 <h4>Periode 4 <Image src={EmptyCheckMark} alt="Lege cirkel icon, als deze periode voltooid is, dan zal hier een checkmark inkomen." /></h4>
-                                <p>Korte uitleg van deze periode en wat hier allemaal gaat gebeuren.</p>
+                                <p>We zijn al bijna halverwege het periode plan. Het is tijd om je huidige focus op de proef te stellen.</p>
                                 <ul>
                                     <li>3 Oefeningen</li>
                                     <li>~ 20 min</li>

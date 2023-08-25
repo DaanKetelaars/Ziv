@@ -7,10 +7,12 @@ import { useRouter } from 'next/navigation'
 
 // Next
 import Image from 'next/image'
+import Link from 'next/link'
 
 // Images
 import Logo from '@/public/ziv-logo.svg'
 import GreenCheck from '@/public/green-check.svg'
+import Arrow from '@/public/arrow-forward-black.svg'
 
 //Styles
 import styles from '@/app/styles/register.module.scss'
@@ -53,6 +55,10 @@ export default function Register() {
         <>
             <header className={styles.header}>
                 <Image src={Logo} alt="Ziv" />
+                <Link href="/welcome">
+                    <Image src={Arrow} alt="Ziv" />
+                    <span>Terug</span>
+                </Link>
             </header>
             <main className={styles.main}>
                 <section>

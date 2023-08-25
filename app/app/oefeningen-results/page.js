@@ -69,7 +69,7 @@ export default function OefeningenResults() {
                                             <h5><Image src={BlackHeart} alt="Black heart icon" />HRV Score</h5>
                                             <p>Goed bezig, je HRV is op het juiste niveau voor je leeftijdsgroep.</p>
                                         </div>
-                                        <p className={styles["oefening-result"]}>50%</p>
+                                        <p className={styles["oefening-result"]}>85</p>
                                     </li>
                                     <li>
                                         <div>

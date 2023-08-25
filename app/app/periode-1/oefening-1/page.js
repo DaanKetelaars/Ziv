@@ -181,7 +181,7 @@ export default function OefeningOne() {
                 <div className={styles.container}>
                     <section>
                         <h1>Ademhaling</h1>
-                        <p>Nog wat korte tips en uitleg over de oefening.</p>
+                        <p>Laat gedachten die in je opkomen direct los en blijf je concentreren op de oefening.</p>
                         <ul>
                             <li>
                                 <p>Duur</p>

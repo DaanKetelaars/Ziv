@@ -14,6 +14,22 @@
         height: 35px;
         margin: 0 auto;
     }
+
+    a {
+        position: absolute;
+        left: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        img {
+            transform: rotate(180deg);
+            width: 20px;
+            height: 20px;
+            margin-right: .5rem;
+        }
+    }
 }
 
 .main {
@@ -335,7 +351,7 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(77, 77, 77, 0.3);
     z-index: 110;
     display: none;
 }
